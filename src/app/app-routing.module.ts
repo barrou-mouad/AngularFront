@@ -7,7 +7,10 @@ import { GestionContractComponent } from './gestion-contract/gestion-contract.co
 import { GestionImmobilierComponent } from './gestion-immobilier/gestion-immobilier.component';
 import { GestionComponent } from './gestion/gestion.component';
 import { HomeComponent } from './home/home.component';
+import { ListAccountsComponent } from './list-accounts/list-accounts.component';
 import { ListClientsComponent } from './list-clients/list-clients.component';
+import { ListContractsComponent } from './list-contracts/list-contracts.component';
+import { ListImmobiliersComponent } from './list-immobiliers/list-immobiliers.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
@@ -19,7 +22,10 @@ const routes: Routes = [
   {path:'g-contract', component:GestionContractComponent},
   {path:'g-client', component:GestionClientComponent},
   {path:'g-account', component:GestionAccountComponent},
-  {path:'clients', component:ListClientsComponent}
+  {path:'L-clients', component:ListClientsComponent},
+  {path:'L-immobiliers', component:ListImmobiliersComponent},
+  {path:'L-accounts', component:ListAccountsComponent},
+  {path:'L-contracts', component:ListContractsComponent}
 ];
 
 @NgModule({

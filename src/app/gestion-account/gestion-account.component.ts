@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-gestion-account',
@@ -10,12 +11,15 @@ import { AuthService } from '../services/auth.service';
 })
 export class GestionAccountComponent implements OnInit {
 
-  constructor(private http:HttpClient,private auth:AuthService) { }
+  constructor(private http:HttpClient,private auth:AuthService,private router: Router) { }
   nom="";
   client:any;
   ngOnInit(): void {
 
   }
+  onContinue1(): void{
+    this.router.navigateByUrl('L-accounts');
+}
   test(myform:any){
     myform.value['client']=this.client
    console.log(myform.value)

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-gestion-immobilier',
   templateUrl: './gestion-immobilier.component.html',
@@ -8,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class GestionImmobilierComponent implements OnInit {
 client:any
 nom=""
-constructor(private http:HttpClient) { }
+constructor(private http:HttpClient,private router: Router) { }
 
   ngOnInit(): void {
   }
+  onContinue1(): void{
+    this.router.navigateByUrl('L-immobiliers');
+}
   getClient(code:string){
     this.http.get("http://localhost:9191/client/code/"+code).subscribe(
       (res:any)=>{

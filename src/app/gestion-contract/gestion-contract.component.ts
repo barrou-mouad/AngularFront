@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-gestion-contract',
@@ -17,10 +18,13 @@ export class GestionContractComponent implements OnInit {
     "privateKey":""
   }
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private router: Router) { }
 
   ngOnInit(): void {
   }
+  onContinue1(): void{
+    this.router.navigateByUrl('L-contracts');
+}
 checkim(code1:any){
 this.http.get("http://localhost:9191/immobilier/code/"+code1).subscribe(
 (res:any)=>{
