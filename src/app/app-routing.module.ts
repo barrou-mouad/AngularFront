@@ -12,6 +12,8 @@ import { ListClientsComponent } from './list-clients/list-clients.component';
 import { ListContractsComponent } from './list-contracts/list-contracts.component';
 import { ListImmobiliersComponent } from './list-immobiliers/list-immobiliers.component';
 import { LoginComponent } from './login/login.component';
+import { UpdateClientComponent } from './update-client/update-client.component';
+import { UpdateImmobilierComponent } from './update-immobilier/update-immobilier.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -25,7 +27,9 @@ const routes: Routes = [
   {path:'L-clients', component:ListClientsComponent},
   {path:'L-immobiliers', component:ListImmobiliersComponent},
   {path:'L-accounts', component:ListAccountsComponent},
-  {path:'L-contracts', component:ListContractsComponent}
+  {path:'L-contracts', component:ListContractsComponent},
+  {path:'U-client', component:UpdateClientComponent},
+  {path:'U-immobilier', component:UpdateImmobilierComponent}
 ];
 
 @NgModule({

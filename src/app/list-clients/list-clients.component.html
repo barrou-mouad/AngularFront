@@ -34,10 +34,11 @@
                         <th>Code Client</th>
                     </tr>
                   </thead>
-                  <tbody>
+                      <tbody>
+                        <tr>
                           <tr *ngFor="let client of clients">
                             <td align="center">
-                              <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                              <a class="btn btn-default" href="U-client"><em class="fa fa-pencil"></em></a>
                               <a class="btn btn-danger" (click)="delete(client.id)" ><em class="fa fa-trash"></em></a>
                             </td>
                             <td class="hidden-xs">1</td>

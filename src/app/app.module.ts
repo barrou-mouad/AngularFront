@@ -18,6 +18,8 @@ import { ListAccountsComponent } from './list-accounts/list-accounts.component';
 import { ListClientsComponent } from './list-clients/list-clients.component';
 import { ListContractsComponent } from './list-contracts/list-contracts.component';
 import { ListImmobiliersComponent } from './list-immobiliers/list-immobiliers.component';
+import { UpdateClientComponent } from './update-client/update-client.component';
+import { UpdateImmobilierComponent } from './update-immobilier/update-immobilier.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,9 @@ import { ListImmobiliersComponent } from './list-immobiliers/list-immobiliers.co
     ListAccountsComponent,
     ListClientsComponent,
     ListContractsComponent,
-    ListImmobiliersComponent
+    ListImmobiliersComponent,
+    UpdateClientComponent,
+    UpdateImmobilierComponent
   ],
   imports: [
     BrowserModule,
