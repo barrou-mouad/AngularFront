@@ -1,0 +1,40 @@
+<!-- <h5>welcom to App</h5> -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+/>
+<header>
+  <nav class="main-nav">
+    <input type="checkbox" id="check" />
+    <label for="check" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <a href="index.html" class="logo">SmartContract</a>
+    <ul class="navlinks">
+      <li>
+        <a
+          routerLink=""
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
+      </li>
+
+      <li><a routerLink="gestion" routerLinkActive="active">Gestion</a></li>
+
+      <li><a routerLink="contact" routerLinkActive="active">Contract</a></li>
+
+      <li><a href="#contactUs">contact us</a></li>
+
+      <li>
+        <a href="#about">About</a>
+      </li>
+
+      <li>
+        <a routerLink="login" routerLinkActive="active" class="contact"
+          >Log in</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
