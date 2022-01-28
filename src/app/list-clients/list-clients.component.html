@@ -8,7 +8,7 @@
 <div class="container">
     <p style="text-align: center"></p>
     <div class="row">
-    
+
         <div class="col-md-10 col-md-offset-1">
 
             <div class="panel panel-default panel-table">
@@ -32,23 +32,23 @@
                         <th>Second Name</th>
                         <th>Email</th>
                         <th>Code Client</th>
-                    </tr> 
+                    </tr>
                   </thead>
                   <tbody>
-                          <tr>
+                          <tr *ngFor="let client of clients">
                             <td align="center">
                               <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                              <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                              <a class="btn btn-danger" (click)="delete(client.id)" ><em class="fa fa-trash"></em></a>
                             </td>
                             <td class="hidden-xs">1</td>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>johndoe@example.com</td>
-                            <td>E14</td>
+                            <td>{{client.nom}}</td>
+                            <td>{{client.prenom}}</td>
+                            <td>{{client.email}}</td>
+                            <td>{{client.codeClient}}</td>
                           </tr>
                         </tbody>
                 </table>
-            
+
               </div>
               <div class="panel-footer">
                 <div class="row">
