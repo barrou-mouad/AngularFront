@@ -24,50 +24,31 @@
   <div class="main-block">
     <div class="left-part">
       <i class="fas fa-user"></i>
-      <h1>Register to our space</h1>
-      
+      <h1>Accounts</h1>
+
       <!-- <p><button (click)="test(myform)" ><a href="L-accounts" style="color: white;">Accounts List</a></button></p>  -->
-      <p><button (click)="onContinue1()" >Accounts List</button></p> 
+      <p><button (click)="onContinue1()" >Annuler la modification</button></p>
     </div>
     <form #myform="ngForm">
       <div class="title">
         <i class="fas fa-pencil-alt"></i>
-        <h2>Register here</h2>
+        <h2>Update account</h2>
       </div>
       <div class="info">
-        <input
-          class="fname"
-          required
-          minlength="6"
-          ngModel
-          type="text"
-          name="address"
-          placeholder="addresse de Compte"
-        />
-        <input
-          type="text"
-          ngModel
-          name="privateKey"
-          placeholder="Priavte Key"
-        />
+        <input class="fname" required minlength="6" ngModel type="text" name="address" placeholder="addresse de Compte"/>
+        <input type="text" ngModel  name="privateKey" placeholder="Priavte Key"/>
         <div class="row">
           <div class="col-md-6">
-            <input
-              type="text"
-              name="client code"
-              #code
-              placeholder="client code"
-            />
+            <input type="text" name="client code"  #code placeholder="client code" />
           </div>
           <div class="col-md-6">
-            <button (click)="getClient(code.value)">Check</button>
+            <button >Check</button>
           </div>
         </div>
 
         <input
           type="text"
           ngModel
-          [(ngModel)]="nom"
           disabled
           #client
           name="client"
@@ -79,7 +60,8 @@
           >I agree to the <a href="#">Privacy Poalicy.</a></span
         >
       </div>
-      <button (click)="test(myform)">Submit</button>
+      <button (click)="onContinue1()">save modification</button>
     </form>
   </div>
 </body>
+

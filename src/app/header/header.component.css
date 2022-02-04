@@ -6,7 +6,7 @@
 }
 
 header {
-  background-color: #125d98;
+  background-color: #1A2849;
 }
 
 .main-nav {
@@ -45,13 +45,13 @@ header {
 }
 
 .navlinks li a:hover {
-  color: #f5a14e;
+  color: #AD62AA;
   padding-bottom: 7px;
-  border-bottom: 2px solid #f5a14e;
+  border-bottom: 2px solid #AD62AA;
 }
 
 li a.contact {
-  background-color: #ff8d1e;
+  background-color: #AD62AA;
   padding: 9px 20px;
   border-radius: 50px;
   transition: all 0.3s ease 0s;
@@ -59,7 +59,7 @@ li a.contact {
 }
 
 li a.contact:hover {
-  background-color: #f1871c;
+  background-color: #E7D9EA;
   color: white;
   border-bottom: none;
 }
@@ -86,7 +86,7 @@ li a.contact:hover {
     text-align: center;
     transition: all 0.5s;
     right: -100%;
-    background: #125d98;
+    background: #1A2849;
   }
 
   .navlinks li {
@@ -122,6 +122,7 @@ li a.contact:hover {
   }
 
   .menu-btn:focus {
-    color: #125d98;
+    color: #1A2849;
   }
 }
+

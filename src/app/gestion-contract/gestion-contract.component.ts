@@ -17,6 +17,7 @@ export class GestionContractComponent implements OnInit {
     "address":"",
     "privateKey":""
   }
+  contrat:any
 
   constructor(private http:HttpClient, private router: Router) { }
 
@@ -61,24 +62,52 @@ async valider(myform:any){
     )
 
 }
-async get(myform:any){
-  console.log("2")
+async get(myform:NgForm){
+  myform.value["bayer"]=this.bayer;
+  myform.value["owner"]=this.immobilier.client;
+  myform.value["immobilier"]=this.immobilier;
+  console.log(myform.value)
+  this.http.post("http://localhost:9191/contrat/save",myform.value).subscribe(
+    (res:any)=>{
+       /* this.contrat=res.data */
+       console.log(res)
+       this.contrat = {
+         id:res.id,
+         owner:res.owner.id,
+         cout:res.cout
+       }
+      // this.contrat=JSON.parse(this.contrat)
+      console.log(this.contrat)
+      this.http.post("http://localhost:9191/ethereum/add",this.contrat).subscribe(
+        (res)=>{
+         console.log("test")
+         this.immobilier.client=this.bayer
+         this.http.post("http://localhost:9191/immobilier/save/",this.immobilier).subscribe(
+          (res:any)=>{
+            console.log(res)
 
-  this.rec['c']['owner']=this.bayer;
-  this.rec['c']['owner']=this.owner;
-  this.rec['c']['immobilier']=this.immobilier;
-  this.rec['c']['cout']=myform.cout
-  this.rec['a']=this.account
 
-
-  this.http.post("http://localhost:9191/contrat/save",this.rec).subscribe(
-    res=>{
-      this.http.post("http://localhost:9191/ethereum/add",res).subscribe(
-        res=>{
-
-        }
+          },
+          (error:any)=>{
+            console.log(error)
+          }
+        )
+        },
+        (error)=>{}
       )
-    }
+    },
+    (error)=>{}
   )
+
+
+  // this.http.post("http://localhost:9191/contrat/save",this.rec).subscribe(
+  //   res=>{
+  //     this.http.post("http://localhost:9191/ethereum/add",res).subscribe(
+  //       res=>{
+
+  //       }
+  //     )
+  //   }
+  // )
 }
 }

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contract.component.css']
 })
 export class ContractComponent implements OnInit {
-
-  constructor() { }
+  contrat:any
+  constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
+    this.http.get("http://localhost:9191/ethereum/getmy").subscribe(
+      (res)=>{
+        console.log(res)
+        this.contrat=res
+      },
+      (error)=>{}
+    )
   }
 
 }

@@ -14,21 +14,21 @@
           <h2>Update Immobilier</h2>
         </div>
         <div class="info">
-          <input class="fname"  type="text" name="address" placeholder="address">
-          <input type="text"  name="codeImmobilier" placeholder="codeImmobilier">
-          <input type="text"  name="type" placeholder="type">
-          <input type="text"  name="description" placeholder="description">
-          <input type="text"  name="surface" placeholder="surface">
+          <input class="fname" [(ngModel)]="immobilier.address" ngModel  type="text" name="address" placeholder="address">
+          <input type="text"   [(ngModel)]="immobilier.codeImmobilier"  name="codeImmobilier" placeholder="codeImmobilier">
+          <input type="text"   [(ngModel)]="immobilier.type"   name="type" placeholder="type">
+          <input type="text"   [(ngModel)]="immobilier.description"  name="description" placeholder="description">
+          <input type="text"   [(ngModel)]="immobilier.surface"  name="surface" placeholder="surface">
           <div class="row">
             <div class="col-md-6"><input type="text" name="client code"  #code placeholder="client code"></div>
-            <div class="col-md-6"><button >Check your code</button></div>
+            <div class="col-md-6"><button (click)="get(code.value)" >Check your code</button></div>
           </div>
 
 
           <input type="text"  disabled #client name="client" placeholder="Client">
         </div>
 
-        <button (click)="onContinue1()">save modification</button>
+        <button (click)="addclient(myform)">save modification</button>
       </form>
     </div>
   </body>

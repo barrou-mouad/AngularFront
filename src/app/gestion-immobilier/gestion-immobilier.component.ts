@@ -15,7 +15,7 @@ constructor(private http:HttpClient,private router: Router) { }
   }
   onContinue1(): void{
     this.router.navigateByUrl('L-immobiliers');
-}
+   }
   getClient(code:string){
     this.http.get("http://localhost:9191/client/code/"+code).subscribe(
       (res:any)=>{
@@ -28,6 +28,7 @@ constructor(private http:HttpClient,private router: Router) { }
       }
     )
   }
+
   addclient(myform:any){
     myform.value['client']=this.client;
     this.http.post("http://localhost:9191/immobilier/save/",myform.value).subscribe(

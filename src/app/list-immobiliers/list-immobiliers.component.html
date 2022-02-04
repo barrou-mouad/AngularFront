@@ -38,19 +38,19 @@
                     </tr>
                   </thead>
                       <tbody>
-                        <tr>
+                        <tr *ngFor="let immobilier of immobiliers">
                           <td align="center">
-                            <a class="btn btn-default" href="U-immobilier"><em class="fa fa-pencil"></em></a>
-                            <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                            <a class="btn btn-default" (click)="edit(immobilier.id)"><em class="fa fa-pencil"></em></a>
+                            <a class="btn btn-danger" (click)="delete(immobilier.id)"><em class="fa fa-trash"></em></a>
                           </td>
                           <td class="hidden-xs">1</td>
-                          <td>Tanger</td>
-                          <td>Appartement</td>
-                          <td>I12</td>
-                          <td>Belle</td>
-                          <td>12m2</td>
-                          <td>E12</td>
-                          <td>Manal</td>
+                          <td>{{immobilier.address}}</td>
+                          <td>{{immobilier.codeImmobilier}}</td>
+                          <td>{{immobilier.type}}</td>
+                          <td>{{immobilier.description}}</td>
+                          <td>{{immobilier.surface}}</td>
+                          <td>{{immobilier.client.codeClient}}</td>
+                          <td>{{immobilier.client.nom+' '+immobilier.client.prenom}}</td>
                         </tr>
                         </tbody>
                 </table>

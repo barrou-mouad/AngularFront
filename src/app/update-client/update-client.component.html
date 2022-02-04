@@ -14,16 +14,15 @@
           <h2>Update Client</h2>
         </div>
         <div class="info">
-          <input class="fname" required minlength="6" ngModel type="text" name="nom" placeholder="First name">
-
-          <input type="text" ngModel name="prenom" placeholder="Secoend name">
-          <input type="text" ngModel name="email" placeholder="Email">
-          <input type="text" ngModel name="codeClient" placeholder="Code Client">
+          <input class="fname" [(ngModel)]="client.nom" ngModel type="text" name="nom" placeholder="First name">
+          <input type="text"   [(ngModel)]="client.prenom"  name="prenom" placeholder="Secoend name">
+          <input type="text"   [(ngModel)]="client.email"  name="email" placeholder="Email">
+          <input type="text"   [(ngModel)]="client.codeClient"  name="codeClient" placeholder="Code Client">
         </div>
         <div class="checkbox">
           <input type="checkbox" name="checkbox"><span>I agree to the <a href="#">Privacy Poalicy.</a></span>
         </div>
-        <button (click)="onContinue1()">save modification</button>
+        <button (click)="update(myform)">save modification</button>
       </form>
     </div>
   </body>

@@ -7,14 +7,14 @@
   bottom: 0;
   color: white;
 } */
-/*==================== 
-  Footer 
+/*====================
+  Footer
 ====================== */
 
 /* Main Footer */
 footer .main-footer {
   padding: 20px 0;
-  background: #125d98;
+  background: #1A2849;
   margin-bottom: 0px;
 }
 footer ul {
@@ -91,8 +91,8 @@ footer.light .footer-copyright {
   display: inline-block;
 }
 
-/*==================== 
-  Widgets 
+/*====================
+  Widgets
 ====================== */
 .widget {
   padding: 20px;
@@ -175,7 +175,7 @@ ul.social-footer2 li {
   padding: 0;
 }
 ul.social-footer2 li a:hover {
-  background-color: #ff8d1e;
+  background-color: #AD62AA;
 }
 ul.social-footer2 li a {
   display: block;
@@ -184,7 +184,7 @@ ul.social-footer2 li a {
   text-align: center;
 }
 .btn {
-  background-color: #ff8d1e;
+  background-color: #AD62AA;
   color: #fff;
 }
 .btn:hover,
@@ -207,7 +207,7 @@ ul.social-footer2 li a {
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
-  background-color: #ff8d1e;
+  background-color: #AD62AA;
   color: #fff;
   padding: 9px;
   border-radius: 5px;
@@ -232,10 +232,10 @@ input[type="text"] {
 }
 
 input.submitbutton.ripplelink {
-  background: #e67e22;
+  background: #AD62AA;
   border: 3px solid rgba(0, 0, 0, 0.1);
   color: #fff;
-  border-color: #e67e22;
+  border-color: #AD62AA;
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
   transition-delay: 0s;
   width: 100%;

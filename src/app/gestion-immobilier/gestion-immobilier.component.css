@@ -13,7 +13,7 @@ p {
   outline: none;
   font-family: Roboto, Arial, sans-serif;
   font-size: 16px;
-  color: #125d98;
+  color: #1A2849;
 }
 body {
   background-color: #eee;
@@ -44,7 +44,7 @@ form {
 }
 .fa-home {
   font-size: 72px;
-  color: #125d98;
+  color: #1A2849;
 }
 form {
   background: rgba(0, 0, 0, 0.7);
@@ -107,7 +107,7 @@ button {
 }
 button:hover,
 .btn-item:hover {
-  background: #125d98;
+  background: #1A2849;
 }
 @media (min-width: 568px) {
   html,

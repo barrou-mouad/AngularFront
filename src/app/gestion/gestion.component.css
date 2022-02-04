@@ -19,9 +19,9 @@
   text-transform: uppercase;
   letter-spacing: 1.3px;
   font-weight: 700;
-  color: #313133;
-  background: #125d98;
-  background: linear-gradient(90deg, #125d98, #ff8d1e);
+  color: #C1A1D3;
+  background: #1A2849;
+  background: linear-gradient(90deg, #1A2849, #AD62AA);
   border: none;
   border-radius: 1000px;
   box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
@@ -37,8 +37,8 @@
   border-radius: 1000px;
   min-width: calc(300px + 12px);
   min-height: calc(60px + 12px);
-  border: 6px solid #ff8d1e;
-  box-shadow: 0 0 60px #125d98;
+  border: 6px solid #AD62AA;
+  box-shadow: 0 0 60px #1A2849;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -49,7 +49,8 @@
 
 .b9 .button:hover,
 .b9 .button:focus {
-  color: #313133;
+  color: #C1A1D3;
+  /* color: #E7D9EA */
   transform: translateY(-6px);
 }
 
@@ -63,7 +64,7 @@
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  border: 6px solid #ff8d1e;
+  border: 6px solid #AD62AA;
   position: absolute;
   z-index: -1;
   top: 50%;

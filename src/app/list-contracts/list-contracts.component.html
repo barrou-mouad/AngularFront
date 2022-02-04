@@ -1,13 +1,27 @@
-<p>list-contracts works!</p>
-<p>list-contracts works!</p>
+<h1 class="text-center"></h1>
+<form action="" class="search-bar">
+	<input type="search" name="search"   #val (input)="search(val.value)" required>
+	<button class="search-btn" type="submit">
+		<span>Search</span>
+	</button>
+</form>
 
-<p>list-contracts works!</p>
+<div class="pricing-box-container">
 
-<p>list-contracts works!</p>
+	<div class="pricing-box text-center"   *ngFor="let contrat of contarts ">
+		<h5>Contract 1</h5>
+		<p class="price"><sup>$</sup>0<sub>/mo</sub></p>
+		<ul class="features-list">
+			<li><strong>Immobilier :</strong> {{contrat.immobilier.id}}</li>
+			<li><strong>Owner :</strong> {{contrat.owner.nom}}</li>
+			<li><strong>Bayer :</strong> {{contrat.bayer.nom}}</li>
+		</ul>
+		<button class="btn-primary">Add contract</button>
+	</div>
 
-<p>list-contracts works!</p>
 
-<p>list-contracts works!</p>
+</div>
 
-<p>list-contracts works!</p>
+
+
 

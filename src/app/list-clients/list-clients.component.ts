@@ -39,4 +39,7 @@ delete(id:string){
   )
 
 }
+edit(id:string){
+  this.router.navigate(['U-client',id])
+}
 }
