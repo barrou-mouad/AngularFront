@@ -1,6 +1,6 @@
 <h1 class="text-center"></h1>
 <form action="" class="search-bar">
-	<input type="search" name="search"   #val (input)="search(val.value)" required>
+	<input type="search" name="search" [(ngModel)]="searchText"   #val (input)="search(val.value)" required>
 	<button class="search-btn" type="submit">
 		<span>Search</span>
 	</button>
@@ -8,9 +8,9 @@
 
 <div class="pricing-box-container">
 
-	<div class="pricing-box text-center"   *ngFor="let contrat of contarts ">
+	<div class="pricing-box text-center"   *ngFor="let contrat of res ">
 		<h5>Contract 1</h5>
-		<p class="price"><sup>$</sup>0<sub>/mo</sub></p>
+		<p class="price"><sup>$</sup>{{contrat.cout}}<sub>/mo</sub></p>
 		<ul class="features-list">
 			<li><strong>Immobilier :</strong> {{contrat.immobilier.id}}</li>
 			<li><strong>Owner :</strong> {{contrat.owner.nom}}</li>

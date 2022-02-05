@@ -14,12 +14,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-authenticate(myfrom:NgForm){
+ authenticate(myfrom:NgForm){
 this.auth.auth(myfrom.value).subscribe(
-  (res:any)=>{
-console.log(res)
-localStorage.setItem('token',res.message)
-this.route.navigateByUrl("/gestion")
+ (res:any)=>{
+ console.log(res)
+ localStorage.setItem('token',res.message)
+ this.route.navigateByUrl("/gestion")
 
   }
 )

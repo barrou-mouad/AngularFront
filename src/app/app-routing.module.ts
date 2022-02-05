@@ -6,6 +6,7 @@ import { GestionClientComponent } from './gestion-client/gestion-client.componen
 import { GestionContractComponent } from './gestion-contract/gestion-contract.component';
 import { GestionImmobilierComponent } from './gestion-immobilier/gestion-immobilier.component';
 import { GestionComponent } from './gestion/gestion.component';
+import { LoginGuard } from './guard/LoginGuard';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ListAccountsComponent } from './list-accounts/list-accounts.component';
@@ -21,14 +22,14 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'', component:HomeComponent},
   {path:'contact', component:ContractComponent},
-  {path:'gestion', component:GestionComponent},
-  {path:'g-immobilier', component:GestionImmobilierComponent},
-  {path:'g-contract', component:GestionContractComponent},
-  {path:'g-client', component:GestionClientComponent},
-  {path:'L-clients', component:ListClientsComponent},
-  {path:'L-immobiliers', component:ListImmobiliersComponent},
-  {path:'L-accounts', component:ListAccountsComponent},
-  {path:'L-contracts', component:ListContractsComponent},
+  {path:'gestion', component:GestionComponent },
+  {path:'g-immobilier', component:GestionImmobilierComponent },
+  {path:'g-contract', component:GestionContractComponent },
+  {path:'g-client', component:GestionClientComponent },
+  {path:'L-clients', component:ListClientsComponent },
+  {path:'L-immobiliers', component:ListImmobiliersComponent },
+  {path:'L-accounts', component:ListAccountsComponent },
+  {path:'L-contracts', component:ListContractsComponent },
   {path:'U-client/:id', component:UpdateClientComponent},
   {path:'U-immobilier/:id', component:UpdateImmobilierComponent},
 

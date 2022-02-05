@@ -8,15 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./list-contracts.component.css']
 })
 export class ListContractsComponent implements OnInit {
-  contarts:any
+  contarts:any[]=[];
   res:any
   searchText:any
   constructor(private router: Router,private http:HttpClient) { }
 
   ngOnInit(): void {
     this.http.get("http://localhost:9191/ethereum/all").subscribe(
-      (res)=>{
+      (res:any)=>{
         this.contarts=res
+        this.res=res
         console.log(res)
       },
       (error)=>{}
@@ -26,8 +27,17 @@ export class ListContractsComponent implements OnInit {
     this.router.navigateByUrl('g-contract');
 }
   search(value:string){
-    this.res=this.contarts.filter((val:any) =>val.immobilier.codeImmobilier.tolowerCase().includes(value))
+    if(value==null){
+      this.res=this.contarts
+    }
+    else {
+        this.res=this.contarts.filter(val =>{
+        console.log(val.immobilier.codeImmobilier);
+        return val.immobilier.codeImmobilier.includes(value);
+        })
+    }
+    console.log(this.res)
 
-  }
+}
 
 }
