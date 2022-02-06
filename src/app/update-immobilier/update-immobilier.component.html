@@ -1,44 +1,83 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+  integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+  crossorigin="anonymous"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+  rel="stylesheet"
+/>
 <h1></h1>
 <body>
-    <div class="main-block">
-      <div class="left-part">
-        <i class="fas fa-home"></i>
-        <h1>Immobilier</h1>
-        <p><button (click)="onContinue1()" >Annuler la modification</button></p>
-      </div>
-      <form #myform="ngForm">
-        <div class="title">
-          <i class="fas fa-pencil-alt"></i>
-          <h2>Update Immobilier</h2>
-        </div>
-        <div class="info">
-          <input class="fname" [(ngModel)]="immobilier.address" ngModel  type="text" name="address" placeholder="address">
-          <input type="text"   [(ngModel)]="immobilier.codeImmobilier"  name="codeImmobilier" placeholder="codeImmobilier">
-          <input type="text"   [(ngModel)]="immobilier.type"   name="type" placeholder="type">
-          <input type="text"   [(ngModel)]="immobilier.description"  name="description" placeholder="description">
-          <input type="text"   [(ngModel)]="immobilier.surface"  name="surface" placeholder="surface">
-          <div class="row">
-            <div class="col-md-6"><input type="text" name="client code"  #code placeholder="client code"></div>
-            <div class="col-md-6"><button (click)="get(code.value)" >Check your code</button></div>
-          </div>
-
-
-          <input type="text"  disabled #client name="client" placeholder="Client">
-        </div>
-
-        <button (click)="addclient(myform)">save modification</button>
-      </form>
+  <div class="main-block">
+    <div class="left-part">
+      <i class="fas fa-home"></i>
+      <h1>L'espace d'immobilier</h1>
+      <p><button (click)="onContinue1()">Annuler la modification</button></p>
     </div>
-  </body>
+    <form #myform="ngForm">
+      <div class="title">
+        <i class="fas fa-pencil-alt"></i>
+        <h2>Modification d'immobilier</h2>
+      </div>
+      <div class="info">
+        <input
+          class="fname"
+          [(ngModel)]="immobilier.address"
+          ngModel
+          type="text"
+          name="address"
+          placeholder="address"
+        />
+        <input
+          type="text"
+          [(ngModel)]="immobilier.codeImmobilier"
+          name="codeImmobilier"
+          placeholder="codeImmobilier"
+        />
+        <input
+          type="text"
+          [(ngModel)]="immobilier.type"
+          name="type"
+          placeholder="type"
+        />
+        <input
+          type="text"
+          [(ngModel)]="immobilier.description"
+          name="description"
+          placeholder="description"
+        />
+        <input
+          type="text"
+          [(ngModel)]="immobilier.surface"
+          name="surface"
+          placeholder="surface"
+        />
+        <div class="row">
+          <div class="col-md-6">
+            <input
+              type="text"
+              name="client code"
+              #code
+              placeholder="client code"
+            />
+          </div>
+          <div class="col-md-6">
+            <button (click)="get(code.value)">Vérifiez le code</button>
+          </div>
+        </div>
 
-<!--
-private String id;
-private String address;
-private String type;
-private String description;
-private double surface ;
+        <input
+          type="text"
+          disabled
+          #client
+          name="client"
+          placeholder="Client"
+        />
+      </div>
 
--->
-
+      <button (click)="addclient(myform)">Confirmer la modification</button>
+    </form>
+  </div>
+</body>

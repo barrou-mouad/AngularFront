@@ -1,29 +1,55 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+  integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+  crossorigin="anonymous"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+  rel="stylesheet"
+/>
 <h1></h1>
 <body>
-    <div class="main-block">
-      <div class="left-part">
-        <i class="fas fa-user"></i>
-        <h1>Client</h1>
-        <p><button (click)="onContinue1()">Annuler la modification</button></p>
-      </div>
-      <form #myform="ngForm">
-        <div class="title">
-          <i class="fas fa-pencil-alt"></i>
-          <h2>Update Client</h2>
-        </div>
-        <div class="info">
-          <input class="fname" [(ngModel)]="client.nom" ngModel type="text" name="nom" placeholder="First name">
-          <input type="text"   [(ngModel)]="client.prenom"  name="prenom" placeholder="Secoend name">
-          <input type="text"   [(ngModel)]="client.email"  name="email" placeholder="Email">
-          <input type="text"   [(ngModel)]="client.codeClient"  name="codeClient" placeholder="Code Client">
-        </div>
-        <div class="checkbox">
-          <input type="checkbox" name="checkbox"><span>I agree to the <a href="#">Privacy Poalicy.</a></span>
-        </div>
-        <button (click)="update(myform)">save modification</button>
-      </form>
+  <div class="main-block">
+    <div class="left-part">
+      <i class="fas fa-user"></i>
+      <h1>l'espace client</h1>
+      <p><button (click)="onContinue1()">Annuler la modification</button></p>
     </div>
-  </body>
-
+    <form #myform="ngForm">
+      <div class="title">
+        <i class="fas fa-pencil-alt"></i>
+        <h2>Modification du client</h2>
+      </div>
+      <div class="info">
+        <input
+          class="fname"
+          [(ngModel)]="client.nom"
+          ngModel
+          type="text"
+          name="nom"
+          placeholder="First name"
+        />
+        <input
+          type="text"
+          [(ngModel)]="client.prenom"
+          name="prenom"
+          placeholder="Secoend name"
+        />
+        <input
+          type="text"
+          [(ngModel)]="client.email"
+          name="email"
+          placeholder="Email"
+        />
+        <input
+          type="text"
+          [(ngModel)]="client.codeClient"
+          name="codeClient"
+          placeholder="Code Client"
+        />
+      </div>
+      <button (click)="update(myform)">Confirmer la modification</button>
+    </form>
+  </div>
+</body>

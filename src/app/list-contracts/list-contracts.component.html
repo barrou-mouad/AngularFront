@@ -1,27 +1,27 @@
 <h1 class="text-center"></h1>
 <form action="" class="search-bar">
-	<input type="search" name="search" [(ngModel)]="searchText"   #val (input)="search(val.value)" required>
-	<button class="search-btn" type="submit">
-		<span>Search</span>
-	</button>
+  <input
+    type="search"
+    name="search"
+    [(ngModel)]="searchText"
+    #val
+    (input)="search(val.value)"
+    required
+  />
+  <button class="search-btn" type="submit">
+    <span>Search</span>
+  </button>
 </form>
 
 <div class="pricing-box-container">
-
-	<div class="pricing-box text-center"   *ngFor="let contrat of res ">
-		<h5>Contract 1</h5>
-		<p class="price"><sup>$</sup>{{contrat.cout}}<sub>/mo</sub></p>
-		<ul class="features-list">
-			<li><strong>Immobilier :</strong> {{contrat.immobilier.id}}</li>
-			<li><strong>Owner :</strong> {{contrat.owner.nom}}</li>
-			<li><strong>Bayer :</strong> {{contrat.bayer.nom}}</li>
-		</ul>
-		<button class="btn-primary">Add contract</button>
-	</div>
-
-
+  <div class="pricing-box text-center" *ngFor="let contrat of res">
+    <h5>Contract 1</h5>
+    <p class="price"><sup>$</sup>{{ contrat.cout }}<sub>/mo</sub></p>
+    <ul class="features-list">
+      <li><strong>Immobilier :</strong> {{ contrat.immobilier.id }}</li>
+      <li><strong>Owner :</strong> {{ contrat.owner.nom }}</li>
+      <li><strong>Bayer :</strong> {{ contrat.bayer.nom }}</li>
+    </ul>
+    <button class="btn-primary">Add contract</button>
+  </div>
 </div>
-
-
-
-
