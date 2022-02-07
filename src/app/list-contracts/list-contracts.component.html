@@ -15,13 +15,14 @@
 
 <div class="pricing-box-container">
   <div class="pricing-box text-center" *ngFor="let contrat of res">
-    <h5>Contract 1</h5>
+    <h5>Contract</h5>
     <p class="price"><sup>$</sup>{{ contrat.cout }}<sub>/mo</sub></p>
     <ul class="features-list">
-      <li><strong>Immobilier :</strong> {{ contrat.immobilier.id }}</li>
-      <li><strong>Owner :</strong> {{ contrat.owner.nom }}</li>
-      <li><strong>Bayer :</strong> {{ contrat.bayer.nom }}</li>
+      <li><strong>Id :</strong> {{ contrat.immobilier.id }}</li>
+      <li><strong>Vendeur :</strong> {{ contrat.owner.nom }}</li>
+      <li><strong>Acheteur :</strong> {{ contrat.bayer.nom }}</li>
+      <li><strong>Date :</strong> {{ contrat.date |  date: 'dd/MM/yyyy hh:mm a'}}</li>
     </ul>
-    <button class="btn-primary">Add contract</button>
+    <!-- <button class="btn-primary">Add contract</button> -->
   </div>
 </div>

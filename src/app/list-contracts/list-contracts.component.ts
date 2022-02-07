@@ -33,7 +33,7 @@ export class ListContractsComponent implements OnInit {
     else {
         this.res=this.contarts.filter(val =>{
         console.log(val.immobilier.codeImmobilier);
-        return val.immobilier.codeImmobilier.includes(value);
+        return (val.immobilier.codeImmobilier.includes(value) || val.owner.nom.includes(value))  ;
         })
     }
     console.log(this.res)
