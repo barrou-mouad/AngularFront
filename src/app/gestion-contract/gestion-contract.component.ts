@@ -98,16 +98,5 @@ async get(myform:NgForm){
     },
     (error)=>{}
   )
-
-
-  // this.http.post("http://localhost:9191/contrat/save",this.rec).subscribe(
-  //   res=>{
-  //     this.http.post("http://localhost:9191/ethereum/add",res).subscribe(
-  //       res=>{
-
-  //       }
-  //     )
-  //   }
-  // )
 }
 }
