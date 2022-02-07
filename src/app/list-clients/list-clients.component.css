@@ -1,421 +1,209 @@
-/*.panel-table .panel-body {
-  padding: 0;
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:600,700';
+* {
+    font-family: 'Open Sans', sans-serif;
 }
 
-.panel-table .panel-body .table-bordered {
-  border-style: none;
-  margin: 0;
+.rwd-table {
+    margin: auto;
+    min-width: 300px;
+    max-width: 100%;
+    border-collapse: collapse;
 }
 
-.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type {
-  text-align: center;
-  width: 100px;
+.rwd-table tr:first-child {
+    border-top: none;
+    background: #269d9d;
+    color: #fff;
 }
 
-.panel-table .panel-body .table-bordered > thead > tr > th:last-of-type,
-.panel-table .panel-body .table-bordered > tbody > tr > td:last-of-type {
-  border-right: 0px;
+.rwd-table tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: #f5f9fc;
 }
 
-.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type,
-.panel-table .panel-body .table-bordered > tbody > tr > td:first-of-type {
-  border-left: 0px;
+.rwd-table tr:nth-child(odd):not(:first-child) {
+    background-color: #ebf3f9;
 }
 
-.panel-table .panel-body .table-bordered > tbody > tr:first-of-type > td {
-  border-bottom: 0px;
+.rwd-table th {
+    display: none;
 }
 
-.panel-table .panel-body .table-bordered > thead > tr:first-of-type > th {
-  border-top: 0px;
+.rwd-table td {
+    display: block;
 }
 
-.panel-table .panel-footer .pagination {
-  margin: 0;
+.rwd-table td:first-child {
+    margin-top: .5em;
 }
 
-/*
-  used to vertically center elements, may need modification if you're not using default sizes.
-
-.panel-table .panel-footer .col {
-  line-height: 34px;
-  height: 34px;
+.rwd-table td:last-child {
+    margin-bottom: .5em;
 }
 
-.panel-table .panel-heading .col h3 {
-  line-height: 30px;
-  height: 30px;
+.rwd-table td:before {
+    content: attr(data-th) ": ";
+    font-weight: bold;
+    width: 120px;
+    display: inline-block;
+    color: #000;
 }
 
-.panel-table .panel-body .table-bordered > tbody > tr > td {
-  line-height: 34px;
+.rwd-table th,
+.rwd-table td {
+    text-align: left;
 }
-*/
-/*
-body {
-    color: #404e67;
-    background: #f5f7fa;
-    font-family: "Open Sans", sans-serif;
-    font-size: xx-large!important;
+
+.rwd-table {
+    color: #333;
+    border-radius: .4em;
+    overflow: hidden;
+}
+
+.rwd-table tr {
+    border-color: #bfbfbf;
+}
+
+.rwd-table th,
+.rwd-table td {
+    padding: .5em 1em;
+}
+
+@media screen and (max-width: 601px) {
+    .rwd-table tr:nth-child(2) {
+        border-top: none;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .rwd-table tr:hover:not(:first-child) {
+        background-color: #d8e7f3;
+    }
+    .rwd-table td:before {
+        display: none;
+    }
+    .rwd-table th,
+    .rwd-table td {
+        display: table-cell;
+        padding: .25em .5em;
+    }
+    .rwd-table th:first-child,
+    .rwd-table td:first-child {
+        padding-left: 0;
+    }
+    .rwd-table th:last-child,
+    .rwd-table td:last-child {
+        padding-right: 0;
+    }
+    .rwd-table th,
+    .rwd-table td {
+        padding: 1em !important;
+    }
 }
 
 .add-new {
     background-color: #208f8f;
-}
-
-.table-wrapper {
-    width: 700px;
-    margin: 30px auto;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-
-.table-title {
-    padding-bottom: 10px;
-    margin: 0 0 10px;
-}
-
-.table-title h2 {
-    margin: 6px 0 0;
-    font-size: 22px;
-}
-
-.table-title .add-new {
-    float: right;
-    height: 30px;
+    float: left;
+    height: 40px;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
     text-shadow: none;
     min-width: 100px;
     border-radius: 50px;
     line-height: 13px;
-}
-
-.table-title .add-new i {
     margin-right: 4px;
-}
-
-table.table {
-    table-layout: fixed;
-}
-
-table.table tr th,
-table.table tr td {
-    border-color: #e9e9e9;
-}
-
-table.table th i {
-    font-size: 13px;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-table.table th:last-child {
-    width: 100px;
-}
-
-table.table td a {
-    cursor: pointer;
-    display: inline-block;
-    margin: 0 5px;
-    min-width: 24px;
-}
-
-table.table td a.add {
-    color: #27c46b;
-}
-
-table.table td a.edit {
-    color: #ffc107;
-}
-
-table.table td a.delete {
-    color: #e34724;
-}
-
-table.table td i {
-    font-size: 19px;
-}
-
-table.table td a.add i {
-    font-size: 24px;
-    margin-right: -1px;
-    position: relative;
-    top: 3px;
-}
-
-table.table .form-control {
-    height: 32px;
-    line-height: 32px;
-    box-shadow: none;
-    border-radius: 2px;
-}
-
-table.table .form-control.error {
-    border-color: #f50000;
-}
-
-table.table td .add {
-    display: none;
-}
-.container-lg{
-  min-height: 900px;
-} */
-
-
-
-/* table {
-	width: 750px;
-	border-collapse: collapse;
-	margin:50px auto;
-	}
-
-/* Zebra striping
-tr:nth-of-type(odd) {
-	background: #eee;
-	}
-
-th {
-	background: #3498db;
-	color: white;
-	font-weight: bold;
-	}
-
-td, th {
-	padding: 10px;
-	border: 1px solid #ccc;
-	text-align: left;
-	font-size: 18px;
-	}
-
-/*
-Max width before this PARTICULAR table gets nasty
-This query will take effect for any screen smaller than 760px
-and also iPads specifically.
-
-@media
-only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
-
-	table {
-	  	width: 100%;
-	}
-
-	/* Force table to not be like tables anymore
-	table, thead, tbody, th, td, tr {
-		display: block;
-	}
-
-	/* Hide table headers (but not display: none;, for accessibility)
-	thead tr {
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
-
-	tr { border: 1px solid #ccc; }
-
-	td {
-		/* Behave  like a "row"
-		border: none;
-		border-bottom: 1px solid #eee;
-		position: relative;
-		padding-left: 50%;
-	}
-
-	td:before {
-		/* Now like a table header
-		position: absolute;
-		/* Top/left values mimic padding
-		top: 6px;
-		left: 6px;
-		width: 45%;
-		padding-right: 10px;
-		white-space: nowrap;
-		/* Label the data
-		content: attr(data-column);
-
-		color: #000;
-		font-weight: bold;
-	}
-
-} */
-
-
-
-@import 'https://fonts.googleapis.com/css?family=Open+Sans:600,700';
-
-* {font-family: 'Open Sans', sans-serif;}
-
-.rwd-table {
-  margin: auto;
-  min-width: 300px;
-  max-width: 100%;
-  border-collapse: collapse;
-}
-
-.rwd-table tr:first-child {
-  border-top: none;
-  background: #269d9d;
-  color: #fff;
-}
-
-.rwd-table tr {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: #f5f9fc;
-}
-
-.rwd-table tr:nth-child(odd):not(:first-child) {
-  background-color: #ebf3f9;
-}
-
-.rwd-table th {
-  display: none;
-}
-
-.rwd-table td {
-  display: block;
-}
-
-.rwd-table td:first-child {
-  margin-top: .5em;
-}
-
-.rwd-table td:last-child {
-  margin-bottom: .5em;
-}
-
-.rwd-table td:before {
-  content: attr(data-th) ": ";
-  font-weight: bold;
-  width: 120px;
-  display: inline-block;
-  color: #000;
-}
-
-.rwd-table th,
-.rwd-table td {
-  text-align: left;
-}
-
-.rwd-table {
-  color: #333;
-  border-radius: .4em;
-  overflow: hidden;
-}
-
-.rwd-table tr {
-  border-color: #bfbfbf;
-}
-
-.rwd-table th,
-.rwd-table td {
-  padding: .5em 1em;
-}
-@media screen and (max-width: 601px) {
-  .rwd-table tr:nth-child(2) {
-    border-top: none;
-  }
-}
-@media screen and (min-width: 600px) {
-  .rwd-table tr:hover:not(:first-child) {
-    background-color: #d8e7f3;
-  }
-  .rwd-table td:before {
-    display: none;
-  }
-  .rwd-table th,
-  .rwd-table td {
-    display: table-cell;
-    padding: .25em .5em;
-  }
-  .rwd-table th:first-child,
-  .rwd-table td:first-child {
-    padding-left: 0;
-  }
-  .rwd-table th:last-child,
-  .rwd-table td:last-child {
-    padding-right: 0;
-  }
-  .rwd-table th,
-  .rwd-table td {
-    padding: 1em !important;
-  }
-}
-.add-new{
-  background-color: #208f8f;
-  float: left;
-  height: 40px;
-  font-weight: bold;
-  font-size: 14px;
-  text-shadow: none;
-  min-width: 100px;
-  border-radius: 50px;
-  line-height: 13px;
-  margin-right: 4px;
 }
 
 
 /* THE END OF THE IMPORTANT STUFF */
 
+
 /* Basic Styling */
-.mm{
-  margin-top: 50px;
+
+.mm {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
+
 body {
-background: #4B79A1;
-background: -webkit-linear-gradient(to left, #4B79A1 , #283E51);
-background: linear-gradient(to left, #4B79A1 , #283E51);
+    background: #4B79A1;
+    background: -webkit-linear-gradient(to left, #4B79A1, #283E51);
+    background: linear-gradient(to left, #4B79A1, #283E51);
 }
-h5{
-  text-align: center;
-  font-size: 2.0em;
-  /* color: #f2f2f2; */
-  color: #170055;
+
+h5 {
+    text-align: center;
+    font-size: 2.0em;
+    /* color: #f2f2f2; */
+    color: #170055;
 }
+
 .container {
-  display: block;
-  text-align: center;
+    display: block;
+    text-align: center;
 }
+
 h3 {
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  font-size: 1.5em;
-  color: #cecece;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-size: 1.5em;
+    color: #cecece;
 }
+
 h3:before {
-  content: "\25C0";
-  position: absolute;
-  left: -50px;
-  -webkit-animation: leftRight 2s linear infinite;
-  animation: leftRight 2s linear infinite;
+    content: "\25C0";
+    position: absolute;
+    left: -50px;
+    -webkit-animation: leftRight 2s linear infinite;
+    animation: leftRight 2s linear infinite;
 }
+
 h3:after {
-  content: "\25b6";
-  position: absolute;
-  right: -50px;
-  -webkit-animation: leftRight 2s linear infinite reverse;
-  animation: leftRight 2s linear infinite reverse;
+    content: "\25b6";
+    position: absolute;
+    right: -50px;
+    -webkit-animation: leftRight 2s linear infinite reverse;
+    animation: leftRight 2s linear infinite reverse;
 }
+
 @-webkit-keyframes leftRight {
-  0%    { -webkit-transform: translateX(0)}
-  25%   { -webkit-transform: translateX(-10px)}
-  75%   { -webkit-transform: translateX(10px)}
-  100%  { -webkit-transform: translateX(0)}
+    0% {
+        -webkit-transform: translateX(0)
+    }
+    25% {
+        -webkit-transform: translateX(-10px)
+    }
+    75% {
+        -webkit-transform: translateX(10px)
+    }
+    100% {
+        -webkit-transform: translateX(0)
+    }
 }
+
 @keyframes leftRight {
-  0%    { transform: translateX(0)}
-  25%   { transform: translateX(-10px)}
-  75%   { transform: translateX(10px)}
-  100%  { transform: translateX(0)}
+    0% {
+        transform: translateX(0)
+    }
+    25% {
+        transform: translateX(-10px)
+    }
+    75% {
+        transform: translateX(10px)
+    }
+    100% {
+        transform: translateX(0)
+    }
 }
+
 
 /*
     Don't look at this last part. It's unnecessary. I was just playing with pixel gradients... Don't judge.
 */
+
+
 /*
 @media screen and (max-width: 601px) {
   .rwd-table tr {

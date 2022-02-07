@@ -1,15 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContractComponent } from './contract/contract.component';
-import { FooterComponent } from './footer/footer.component';
 import { GestionClientComponent } from './gestion-client/gestion-client.component';
 import { GestionContractComponent } from './gestion-contract/gestion-contract.component';
 import { GestionImmobilierComponent } from './gestion-immobilier/gestion-immobilier.component';
 import { GestionComponent } from './gestion/gestion.component';
-import { LoginGuard } from './guard/LoginGuard';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { ListAccountsComponent } from './list-accounts/list-accounts.component';
 import { ListClientsComponent } from './list-clients/list-clients.component';
 import { ListContractsComponent } from './list-contracts/list-contracts.component';
 import { ListImmobiliersComponent } from './list-immobiliers/list-immobiliers.component';
@@ -28,7 +25,6 @@ const routes: Routes = [
   {path:'g-client', component:GestionClientComponent },
   {path:'L-clients', component:ListClientsComponent },
   {path:'L-immobiliers', component:ListImmobiliersComponent },
-  {path:'L-accounts', component:ListAccountsComponent },
   {path:'L-contracts', component:ListContractsComponent },
   {path:'U-client/:id', component:UpdateClientComponent},
   {path:'U-immobilier/:id', component:UpdateImmobilierComponent},

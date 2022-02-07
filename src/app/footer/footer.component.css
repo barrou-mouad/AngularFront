@@ -1,18 +1,11 @@
-/* h5 {
-  background-color: #125d98;
-  padding: 20px;
-  margin: 0;
-  position: absolute;
-  width: 97.66%;
-  bottom: 0;
-  color: white;
-} */
-
-
 /*====================
   Footer
 ====================== */
 
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
+@import url(https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css);
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
 
 /* Main Footer */
 
@@ -300,4 +293,3 @@ input.submitbutton.ripplelink {
     margin-left: 5px;
     color: #ffffff;
 }
-

@@ -1,25 +1,22 @@
-<h1 class="text-center"></h1>
-<form action="" class="search-bar">
-	<input type="search" name="search"   #val  required>
-	<button class="search-btn" type="submit">
-		<span>Search</span>
-	</button>
-</form>
+<div>
+  <!--Chercher-->
+  <form action="" class="search-bar">
+    <input type="search" name="search" #val required />
+    <button class="search-btn" type="submit">
+      <span>Search</span>
+    </button>
+  </form>
 
-<div class="pricing-box-container">
-	<div class="pricing-box text-center"   *ngFor="let c of contrat ">
-		<h5>Contract 1</h5>
-		<p class="price"><sup>$</sup>0<sub>/mo</sub></p>
-		<ul class="features-list">
-			<li><strong>Immobilier :</strong> {{c.id}}</li>
-			<li><strong>Owner :</strong> {{c.owner}}</li>
-			<li><strong>Cout :</strong> {{c.cout}}</li>
-		</ul>
-	</div>
-
-
+  <!--Les contracts-->
+  <div class="pricing-box-container">
+    <div class="pricing-box text-center" *ngFor="let c of contrat">
+      <h5>Smart Contract</h5>
+      <p class="price"><sup>$</sup>0<sub>/mo</sub></p>
+      <ul class="features-list">
+        <li><strong>Id:</strong> {{ c.id }}</li>
+        <li><strong>Le vendeur :</strong> {{ c.owner }}</li>
+        <li><strong>Le coût:</strong> {{ c.cout }}</li>
+      </ul>
+    </div>
+  </div>
 </div>
-
-
-
-

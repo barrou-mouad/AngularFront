@@ -14,13 +14,11 @@ import { GestionClientComponent } from './gestion-client/gestion-client.componen
 import { GestionImmobilierComponent } from './gestion-immobilier/gestion-immobilier.component';
 import { FormsModule } from '@angular/forms';
 
-import { ListAccountsComponent } from './list-accounts/list-accounts.component';
 import { ListClientsComponent } from './list-clients/list-clients.component';
 import { ListContractsComponent } from './list-contracts/list-contracts.component';
 import { ListImmobiliersComponent } from './list-immobiliers/list-immobiliers.component';
 import { UpdateClientComponent } from './update-client/update-client.component';
 import { UpdateImmobilierComponent } from './update-immobilier/update-immobilier.component';
-import { UpdateAccountComponent } from './update-account/update-account.component';
 import { FilterPipe } from './filter.pipe';
 @NgModule({
   declarations: [
@@ -34,13 +32,11 @@ import { FilterPipe } from './filter.pipe';
     GestionContractComponent,
     GestionClientComponent,
     GestionImmobilierComponent,
-    ListAccountsComponent,
     ListClientsComponent,
     ListContractsComponent,
     ListImmobiliersComponent,
     UpdateClientComponent,
     UpdateImmobilierComponent,
-    UpdateAccountComponent,
     FilterPipe
   ],
   imports: [

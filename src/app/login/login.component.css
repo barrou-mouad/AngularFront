@@ -1,14 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
-body {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 1.7;
-    color: #c4c3ca;
-    background-color: #1A2849;
-    overflow-x: hidden;
-}
-
+@import url(https://unicons.iconscout.com/release/v4.0.0/css/line.css);
 a {
     cursor: pointer;
     transition: all 200ms linear;
@@ -46,6 +37,7 @@ h6 span {
     position: relative;
     width: 100%;
     display: block;
+    margin-top: 0px;
 }
 
 .full-height {
@@ -69,7 +61,7 @@ h6 span {
     padding: 0;
     margin: 10px auto;
     cursor: pointer;
-    background-color: #AD62AA;
+    background-color: #208f8f;
 }
 
 .checkbox:checked+label:before,
@@ -80,7 +72,7 @@ h6 span {
     height: 36px;
     border-radius: 50%;
     color: #208f8f;
-    background-color: #1A2849;
+    background-color: #170055;
     font-family: "unicons";
     content: "\eb4f";
     z-index: 20;
@@ -281,7 +273,7 @@ h6 span {
     text-align: center;
     border: none;
     background-color: #E7D9EA;
-    color: #1A2849;
+    color: #170055;
     box-shadow: 0 8px 24px 0 rgba(255, 235, 167, 0.2);
 }
 
