@@ -12,17 +12,17 @@ export class GestionComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  //route vers gestion client
   onContinue1(): void{
     this.router.navigateByUrl('g-client');
 }
+//route vers gestion immobilier
   onContinue2(): void{
   this.router.navigateByUrl('g-immobilier');
 }
+//route vers gestion contrat
   onContinue3(): void{
   this.router.navigateByUrl('g-contract');
-}
-onContinue4():void {
-  this.router.navigateByUrl('g-account');
 }
 
 }

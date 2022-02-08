@@ -12,6 +12,7 @@ export class UpdateImmobilierComponent implements OnInit {
   id:any
   immobilier:any={};
   client:any={};
+  name:string="";
   constructor(private router: Router,private router1: ActivatedRoute,private http:HttpClient) { }
 
   ngOnInit(): void {
@@ -36,7 +37,7 @@ addclient(myform:any){
   this.http.post("http://localhost:9191/immobilier/save/",myform.value).subscribe(
     (res:any)=>{
       console.log(res)
-
+      this.router.navigateByUrl('L-immobiliers')
 
     },
     (error:any)=>{
@@ -52,6 +53,7 @@ get(id:string){
     (res:any)=>{
       console.log(res)
       this.client=res
+      this.name=res.nom +' '+res.prenom;
 
     },
     (error:any)=>{

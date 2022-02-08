@@ -35,7 +35,7 @@ constructor(private http:HttpClient,private router: Router) { }
       (res:any)=>{
         console.log(res)
 
-
+this.router.navigateByUrl('L-immobiliers')
       },
       (error:any)=>{
         console.log(error)

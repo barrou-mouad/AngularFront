@@ -16,9 +16,9 @@
   <div class="pricing-box-container">
     <div class="pricing-box text-center" *ngFor="let contrat of res">
       <h5>Smart Contract</h5>
-      <p class="price"><sup>$</sup>{{ contrat.cout }}<sub>/mo</sub></p>
+      <p class="price"><sup>eth</sup>{{ contrat.cout }}</p>
       <ul class="features-list">
-        <li><strong>Id :</strong> {{ contrat.immobilier.id }}</li>
+        <li><strong>Id :</strong> {{ contrat.id }}</li>
         <li><strong>Vendeur :</strong> {{ contrat.owner.nom }}</li>
         <li><strong>Acheteur :</strong> {{ contrat.bayer.nom }}</li>
         <li>
@@ -26,7 +26,6 @@
           {{ contrat.date | date: "dd/MM/yyyy hh:mm a" }}
         </li>
       </ul>
-      <!-- <button class="btn-primary">Add contract</button> -->
     </div>
   </div>
 </div>

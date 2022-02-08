@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 @import url(https://use.fontawesome.com/releases/v5.4.1/css/all.css);
+
 div,
 form,
 select,
@@ -9,7 +10,7 @@ p {
     outline: none;
     font-family: Roboto, Arial, sans-serif;
     font-size: 16px;
-    color: #170055;
+    color: #208f8f;
 }
 
 input {
@@ -150,4 +151,7 @@ button:hover,
         flex: 1;
         height: auto;
     }
+}
+.main{
+  min-height: 500px !important;
 }

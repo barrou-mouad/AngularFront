@@ -1,17 +1,8 @@
-<div>
-  <!--Chercher-->
-  <form action="" class="search-bar">
-    <input type="search" name="search" #val required />
-    <button class="search-btn" type="submit">
-      <span>Search</span>
-    </button>
-  </form>
-
-  <!--Les contracts-->
+<div class="main">
   <div class="pricing-box-container">
     <div class="pricing-box text-center" *ngFor="let c of contrat">
       <h5>Smart Contract</h5>
-      <p class="price"><sup>$</sup>0<sub>/mo</sub></p>
+      <p class="price"><sup>eth</sup>{{ c.cout }}</p>
       <ul class="features-list">
         <li><strong>Id:</strong> {{ c.id }}</li>
         <li><strong>Le vendeur :</strong> {{ c.owner }}</li>

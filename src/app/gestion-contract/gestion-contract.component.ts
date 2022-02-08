@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { NgForm } from '@angular/forms';
+import { NgForm, NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +11,9 @@ import { Router } from '@angular/router';
 export class GestionContractComponent implements OnInit {
   immobilier:any;
   owner:any
+  bayerName=""
   bayer:any
+  ownerName:string="";
   rec:any={}
   account={
     "address":"",
@@ -32,9 +34,10 @@ this.http.get("http://localhost:9191/immobilier/code/"+code1).subscribe(
   console.log(res)
   this.immobilier=res
   this.owner=this.immobilier.client
-  this.account.privateKey=this.owner.accounts[0].privateKey
+  this.ownerName=this.owner.nom+' '+this.owner.prenom
 }
 )
+
 }
 /*
 
@@ -45,7 +48,7 @@ checkcl(code2:string){
     (res:any)=>{
       console.log(res)
       this.bayer=res
-      this.account.address=this.bayer.accounts[0].address
+      this.bayerName=this.bayer.nom+' '+this.bayer.prenom
     }
     )
 }
@@ -85,7 +88,7 @@ async get(myform:NgForm){
          this.http.post("http://localhost:9191/immobilier/save/",this.immobilier).subscribe(
           (res:any)=>{
             console.log(res)
-
+            this.router.navigateByUrl('L-contracts');
 
           },
           (error:any)=>{

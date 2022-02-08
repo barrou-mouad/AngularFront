@@ -25,12 +25,10 @@
       </tr>
       <tr *ngFor="let client of clients">
         <td data-th="Action">
-          <a class="btn btn-default" (click)="edit(client.id)"
-            ><em class="fa fa-pencil"></em
-          ></a>
+          <a class="btn btn-default" style="font-size: 42px;" (click)="edit(client.id)"
+            ><i class="fa fa-pencil-square" aria-hidden="true"></i></a>
           <a class="btn btn-danger" (click)="delete(client.id)"
-            ><em class="fa fa-trash"></em
-          ></a>
+            ><i class="fa fa-trash" aria-hidden="true"></i></a>
         </td>
         <td data-th="Prénom">
           {{ client.prenom }}

@@ -5,6 +5,7 @@ import { GestionClientComponent } from './gestion-client/gestion-client.componen
 import { GestionContractComponent } from './gestion-contract/gestion-contract.component';
 import { GestionImmobilierComponent } from './gestion-immobilier/gestion-immobilier.component';
 import { GestionComponent } from './gestion/gestion.component';
+import { LoginGuard } from './guard/LoginGuard';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ListClientsComponent } from './list-clients/list-clients.component';

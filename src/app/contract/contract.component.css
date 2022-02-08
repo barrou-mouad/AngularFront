@@ -2,7 +2,9 @@
 * {
     box-sizing: border-box;
 }
-
+.main{
+  min-height: 500px;
+}
 body {
     background-color: #f6f5f7;
     font-family: 'Open Sans', sans-serif;

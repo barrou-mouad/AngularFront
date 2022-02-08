@@ -56,7 +56,7 @@
         </div>
       </div>
 
-      <input type="text" disabled #client name="client" placeholder="Client" />
+      <input type="text"     [(ngModel)]="name" disabled #client name="client" placeholder="Client" />
     </div>
 
     <button (click)="addclient(myform)">Confirmer la modification</button>
